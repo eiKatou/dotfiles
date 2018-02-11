@@ -1,0 +1,23 @@
+" https://github.com/vifm/vifm/blob/master/data/vifmrc
+
+" This is how many directories to store in the directory history.
+set history=100
+
+" Automatically resolve symbolic links on l or Enter.
+set nofollowlinks
+
+" Natural sort of (version) numbers within text.
+set number
+
+mark b ~/bin/
+mark h ~/
+mark g ~/Documents/GitHub
+mark s ~/Documents/GitHub/Sample
+
+command! clpwd echo %d|pbcopy
+command! zip zip -r %f.zip %f
+command! run !! ./%f
+command! k mkdir %a
+command! mv mv %f %D
+command! cp cp -rp %f %D
+
