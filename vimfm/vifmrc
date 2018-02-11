@@ -20,4 +20,4 @@ command! run !! ./%f
 command! k mkdir %a
 command! mv mv %f %D
 command! cp cp -rp %f %D
-command! lsl !!ls -l %a
+command! lsl !!ls -al %a
