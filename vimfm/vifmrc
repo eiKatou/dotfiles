@@ -1,5 +1,8 @@
 " https://github.com/vifm/vifm/blob/master/data/vifmrc
 
+" bashrc
+let $BASH_ENV='~/.bashrc'
+
 " This is how many directories to store in the directory history.
 set history=100
 
@@ -13,11 +16,17 @@ mark b ~/bin/
 mark h ~/
 mark g ~/Documents/GitHub
 mark s ~/Documents/GitHub/Sample
+mark l ~/Download
 
-command! clpwd echo %d|pbcopy
 command! zip zip -r %f.zip %f
 command! run !! ./%f
-command! k mkdir %a
 command! mv mv %f %D
 command! cp cp -rp %f %D
 command! lsl !!ls -al %a
+
+" https://wiki.vifm.info/index.php?title=How_to_copy_path_to_current_file/directory_to_system_clipboardcopy
+" yank target file path into the clipboard
+nnoremap yp :!echo -n %f:p | pbcopy %i<cr>
+ 
+" copy current filename without path into the clipboard
+nnoremap yn :!echo -n %f | pbcopy %i<cr>
