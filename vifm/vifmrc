@@ -16,7 +16,7 @@ mark b ~/bin/
 mark h ~/
 mark g ~/Documents/GitHub
 mark s ~/Documents/GitHub/Sample
-mark l ~/Download
+mark l ~/Downloads/
 
 command! zip zip -r %f.zip %f
 command! run !! ./%f
