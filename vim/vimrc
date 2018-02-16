@@ -13,9 +13,15 @@ set termencoding=UTF-8
 set clipboard+=unnamed
 
 " 行番号を表示
-set number
+"set number
+set relativenumber
+
 " netrw: 行番号を表示
-let g:netrw_bufsettings = 'noma nomod number nobl nowrap ro'
+let g:netrw_bufsettings = 'noma nomod relativenumber nobl nowrap ro'
+" netrw: 非表示ファイルを設定
+let g:netrw_list_hide = '^\./$,\(^\|\s\s\)\zs\.\S\+'
+" netrw: 初期表示は非表示ファイルなし
+let g:netrw_hide=1
 
 " 対応括弧をハイライト表示する
 set showmatch
