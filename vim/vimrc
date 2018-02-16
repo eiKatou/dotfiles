@@ -1,6 +1,32 @@
-set clipboard+=unnamed
-set number
+" 構文チェック
+syntax enable
 
+" カラースキーム変更
+colorscheme desert
+
+" エンコーディング
+set encoding=UTF-8
+set fileencoding=UTF-8
+set termencoding=UTF-8
+
+" クリップボード有効化
+set clipboard+=unnamed
+
+" 行番号を表示
+set number
+" netrw: 行番号を表示
 let g:netrw_bufsettings = 'noma nomod number nobl nowrap ro'
+
+" 対応括弧をハイライト表示する
+set showmatch
+
+" タブ文字幅
+set tabstop=2
+" 自動インデントの幅
+set shiftwidth=2
+
+" Ctr+[でインサートされる問題の解決
 imap <Nul> <Nop>
+" Backspaceが効かない問題の解決
+set backspace=indent,eol,start
 
