@@ -13,15 +13,8 @@ set termencoding=UTF-8
 set clipboard+=unnamed
 
 " 行番号を表示
-"set number
+set number
 set relativenumber
-
-" netrw: 行番号を表示
-let g:netrw_bufsettings = 'noma nomod relativenumber nobl nowrap ro'
-" netrw: 非表示ファイルを設定
-let g:netrw_list_hide = '^\./$,\(^\|\s\s\)\zs\.\S\+'
-" netrw: 初期表示は非表示ファイルなし
-let g:netrw_hide=1
 
 " 対応括弧をハイライト表示する
 set showmatch
@@ -36,3 +29,14 @@ imap <Nul> <Nop>
 " Backspaceが効かない問題の解決
 set backspace=indent,eol,start
 
+" netrw: 行番号を表示
+let g:netrw_bufsettings='noma nomod relativenumber nobl nowrap ro'
+" netrw: 非表示ファイルを設定(./だけは表示）
+let g:netrw_list_hide='\(\(^\|\s\s\)\zs\.\S\+/\|\(^\|\s\s\)\zs\.\S\+[^/]\)'
+" netrw: 初期表示は非表示ファイルなし
+let g:netrw_hide=1
+" netrw: rmでディレクトリも消す
+let g:netrw_localrmdir='rm -rf'
+" netrw: カレントディレクトリを追随する
+
+let g:netrw_keepdir=0
