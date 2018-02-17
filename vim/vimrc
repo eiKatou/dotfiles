@@ -35,8 +35,8 @@ let g:netrw_bufsettings='noma nomod relativenumber nobl nowrap ro'
 let g:netrw_list_hide='\(\(^\|\s\s\)\zs\.\S\+/\|\(^\|\s\s\)\zs\.\S\+[^/]\)'
 " netrw: 初期表示は非表示ファイルなし
 let g:netrw_hide=1
-" netrw: rmでディレクトリも消す
-let g:netrw_localrmdir='rm -rf'
+" netrw: rmでディレクトリも消す（動かない）
+"let g:netrw_localrmdir='/bin/rm -r'
 " netrw: カレントディレクトリを追随する
-
 let g:netrw_keepdir=0
+
