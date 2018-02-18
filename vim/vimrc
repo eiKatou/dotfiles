@@ -44,5 +44,6 @@ let g:netrw_keepdir=0
 " netrw: ファイル・ディレクトリを確認
 noremap @l ^<C-V>$y:echo 'rm -rf '.@"<CR>
 " netrw: ファイル・ディレクトリを消すコマンドをコピー
-noremap @c ^<C-V>$y:echo system('echo -n :!rm -rf ./'.@".'\|pbcopy')<CR>:echo 'copy > rm -rf ./'.@"<CR>
-
+noremap @d ^<C-V>$y:echo system('echo -n :!rm -rf ./'.@".'\|pbcopy')<CR>:echo 'copy > rm -rf ./'.@"<CR>
+" nettw: もう一つのペインのディレクトリターゲットにする
+map @w <C-w>w0gg/^\./<CR>mt<C-w>w
