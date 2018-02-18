@@ -29,6 +29,10 @@ imap <Nul> <Nop>
 " Backspaceが効かない問題の解決
 set backspace=indent,eol,start
 
+" ショートカット
+" 次のウィンドウに移動
+map @w <C-w>w
+
 " netrw: 行番号を表示
 let g:netrw_bufsettings='noma nomod relativenumber nobl nowrap ro'
 " netrw: 非表示ファイルを設定(./だけは表示）
@@ -46,4 +50,5 @@ noremap @l ^<C-V>$y:echo 'rm -rf '.@"<CR>
 " netrw: ファイル・ディレクトリを消すコマンドをコピー
 noremap @d ^<C-V>$y:echo system('echo -n :!rm -rf ./'.@".'\|pbcopy')<CR>:echo 'copy > rm -rf ./'.@"<CR>
 " nettw: もう一つのペインのディレクトリターゲットにする
-map @w <C-w>w0gg/^\./<CR>mt<C-w>w
+map @t <C-w>w0gg/^\./<CR>mt<C-w>w
+
