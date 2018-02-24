@@ -13,5 +13,6 @@ rm -i ~/.tmux.conf
 ln -s `pwd`/tmux/tmux.conf ~/.tmux.conf
 
 ## karabiner
+https://pqrs.org/osx/karabiner/
 mkdir -p ~/.config/karabiner/assets/complex_modifications/
 ln -s `pwd`/karabiner/FromEscapeToJapanese_eisuu.json ~/.config/karabiner/assets/complex_modifications/FromEscapeToJapanese_eisuu.json
