@@ -1,5 +1,9 @@
 # dotfiles
 
+## bash
+ln -s `pwd`/bash/bashrc ~/.bashrc
+ln -s `pwd`/bash/bash_profile ~/.bash_profile
+
 ## vi
 rm -i ~/.vimrc
 ln -s `pwd`/vim/vimrc ~/.vimrc
