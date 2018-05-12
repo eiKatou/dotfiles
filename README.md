@@ -8,6 +8,12 @@ ln -s `pwd`/bash/bash_profile ~/.bash_profile
 rm -i ~/.vimrc
 ln -s `pwd`/vim/vimrc ~/.vimrc
 
+## vi(neobundle)
+mkdir -p ~/.vim/bundle
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+(or) git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+(vi):NeoBundleInstall
+
 ## vifm
 rm -i ~/.vifmrc
 ln -s `pwd`/vimfm/vifmrc ~/.vifmrc

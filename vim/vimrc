@@ -1,3 +1,41 @@
+
+" neobundle
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+if &compatible
+ set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+au BufRead,BufNewFile *.md set filetype=markdown
+"let g:vim_markdown_folding_level = 6
+let g:vim_markdown_folding_disabled = 1
+
 " 構文チェック
 syntax enable
 
@@ -23,6 +61,10 @@ set showmatch
 set tabstop=2
 " 自動インデントの幅
 set shiftwidth=2
+
+" コロンセミコロン入れ変え
+noremap ; :
+noremap : ;
 
 " Ctr+[でインサートされる問題の解決
 imap <Nul> <Nop>
