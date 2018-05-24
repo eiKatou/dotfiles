@@ -66,6 +66,9 @@ set shiftwidth=2
 noremap ; :
 noremap : ;
 
+" Turn off paste mode when leaving insert
+autocmd InsertLeave * set nopaste
+
 " Ctr+[でインサートされる問題の解決
 imap <Nul> <Nop>
 " Backspaceが効かない問題の解決
