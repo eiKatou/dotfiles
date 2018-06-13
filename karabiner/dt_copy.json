@@ -1,0 +1,76 @@
+{
+  "title": "ddt",
+  "rules": [
+    {
+      "description": "Double tap 'left_control' to 'Ctrl + c'",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": [
+            {
+							"key_code": "c",
+							"modifiers": [ "command" ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "left_control_key",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "left_control_key",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "left_control_key",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "left_control_key",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "left_control_key",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
