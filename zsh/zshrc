@@ -1,3 +1,5 @@
 # .zshrc
 export PS1="%10F%m%f:%11F%1~%f \$ "
-export PROMPT=$PS1
+
+alias git.dotfiles='cd ~/Documents/GitHub/dotfiles/'
+alias git.sample='cd ~/Documents/GitHub/Sample/'
