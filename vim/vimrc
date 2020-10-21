@@ -33,8 +33,23 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 au BufRead,BufNewFile *.md set filetype=markdown
-"let g:vim_markdown_folding_level = 6
+
+" plasticboy/vim-markdown
+" 折りたたみの禁止
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
+
+" kannokanno/previm
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+" ctrl pでプレビュー
+nnoremap <silent> <C-p> :PrevimOpen<CR>
+
+" tyru/open-browser.vim
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 " 構文チェック
 syntax enable
