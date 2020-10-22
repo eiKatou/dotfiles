@@ -112,3 +112,6 @@ noremap @d ^<C-V>$y:echo system('echo -n :!rm -rf ./'.@".'\|pbcopy')<CR>:echo 'c
 " nettw: もう一つのペインのディレクトリターゲットにする
 map @t <C-w>w0gg/^\./<CR>mt<C-w>w
 
+" Markdownの取り消し線を入れる
+noremap @~ i~~<ESC>$a~~<ESC>
+
