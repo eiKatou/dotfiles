@@ -8,8 +8,6 @@ export PS1="%10F%m%f:%11F%1~%f \$ "
 alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
 
 # AWS
-alias aws-export.work='export AWS_PROFILE="work"'
-alias aws-export.blogger='export AWS_PROFILE="blogger"'
 alias aws-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" amazon/aws-cli'
 alias sam-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" aws-sam'
 

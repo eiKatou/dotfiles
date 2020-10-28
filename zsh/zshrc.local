@@ -3,3 +3,6 @@ alias git.dotfiles='cd ~/Documents/GitHub/dotfiles/'
 alias git.sample='cd ~/Documents/GitHub/Sample/'
 alias git.eikatou.net='cd ~/Documents/GitHub/eikatou.net/'
 
+# AWS
+alias aws-export.work='export AWS_PROFILE="work"'
+alias aws-export.blogger='export AWS_PROFILE="blogger"'
