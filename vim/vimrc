@@ -99,18 +99,6 @@ let g:netrw_bufsettings='noma nomod relativenumber nobl nowrap ro'
 let g:netrw_list_hide='\(\(^\|\s\s\)\zs\.\S\+/\|\(^\|\s\s\)\zs\.\S\+[^/]\)'
 " netrw: 初期表示は非表示ファイルなし
 let g:netrw_hide=1
-" netrw: rmでディレクトリも消す（動かない）
-"let g:netrw_localrmdir='/bin/rm -r'
-" netrw: カレントディレクトリを追随する
-let g:netrw_keepdir=0
-" netrw: ファイル・ディレクトリを消す（危険なので停止）
-"noremap @D ^<C-V>$y:echo system('rm -rf '.@")<CR><C-l>:echo 'delete '.@"<CR>
-" netrw: ファイル・ディレクトリを確認
-noremap @l ^<C-V>$y:echo 'rm -rf '.@"<CR>
-" netrw: ファイル・ディレクトリを消すコマンドをコピー
-noremap @d ^<C-V>$y:echo system('echo -n :!rm -rf ./'.@".'\|pbcopy')<CR>:echo 'copy > rm -rf ./'.@"<CR>
-" nettw: もう一つのペインのディレクトリターゲットにする
-map @t <C-w>w0gg/^\./<CR>mt<C-w>w
 
 " Markdownの取り消し線を入れる
 noremap @~ i~~<ESC>$a~~<ESC>

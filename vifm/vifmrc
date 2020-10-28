@@ -12,12 +12,6 @@ set nofollowlinks
 " Natural sort of (version) numbers within text.
 set number
 
-mark b ~/bin/
-mark h ~/
-mark g ~/Documents/GitHub
-mark s ~/Documents/GitHub/Sample
-mark l ~/Downloads/
-
 command! zip zip -r %f.zip %f
 command! run !! ./%f
 command! mv mv %f %D
@@ -30,3 +24,17 @@ nnoremap yp :!echo -n %f:p | pbcopy %i<cr>
  
 " copy current filename without path into the clipboard
 nnoremap yn :!echo -n %f | pbcopy %i<cr>
+
+" ディレクトリを作成する
+nnoremap K :mkdir<space>
+
+" カレントファイルを関連付けられたデフォルトのアプリケーションで開く。フォルダの場合は Finder で開く (Mac)
+nnoremap X :!open %f<cr>
+
+" 反対側のペインをカレントペインと同期する
+nnoremap , :sync!<cr>
+
+" コロンセミコロン入れ変え
+noremap ; :
+noremap : ;
+
