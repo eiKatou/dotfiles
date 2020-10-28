@@ -6,6 +6,13 @@ ln -s `pwd`/bash/bashrc ~/.bashrc
 ln -s `pwd`/bash/bash_profile ~/.bash_profile
 ```
 
+## zsh
+```bash
+ln -s `pwd`/zsh/zshrc ~/.zshrc
+ln -s `pwd`/zsh/zshrc.local ~/.zshrc.local
+ln -s `pwd`/zsh/zsh_profile ~/.zsh_profile
+```
+
 ## vi
 ```bash
 rm -i ~/.vimrc
