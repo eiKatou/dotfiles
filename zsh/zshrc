@@ -1,10 +1,8 @@
 # .zshrc
 export PS1="%10F%m%f:%11F%1~%f \$ "
 
-# Git
-alias git.dotfiles='cd ~/Documents/GitHub/dotfiles/'
-alias git.sample='cd ~/Documents/GitHub/Sample/'
-alias git.eikatou.net='cd ~/Documents/GitHub/eikatou.net/'
+# .zsh.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # Docker
 alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
