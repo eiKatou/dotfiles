@@ -11,3 +11,7 @@ alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
 alias aws-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" amazon/aws-cli'
 alias sam-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" aws-sam'
 
+# k8s
+autoload -Uz compinit
+compinit
+source <(kubectl completion zsh)
