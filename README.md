@@ -1,5 +1,10 @@
 # dotfiles
 
+## bin
+```bash
+ln -s `pwd`/bin ~/bin
+```
+
 ## bash
 ```bash
 ln -s `pwd`/bash/bashrc ~/.bashrc
