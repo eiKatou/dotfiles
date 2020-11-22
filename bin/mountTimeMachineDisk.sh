@@ -2,6 +2,7 @@
 
 date>>/Users/ei/bin/mount.log
 echo "mount">>/Users/ei/bin/mount.log
+sleep 10
 PASSWORD=`cat /Users/ei/bin/time_password`
 
 /usr/sbin/diskutil coreStorage list>>/Users/ei/bin/mount.log
