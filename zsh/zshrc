@@ -15,3 +15,6 @@ alias sam-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS
 autoload -Uz compinit
 compinit
 source <(kubectl completion zsh)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
