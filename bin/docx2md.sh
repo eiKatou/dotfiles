@@ -3,6 +3,13 @@
 # docx2md xxx.docx outdir
 # 注意：docxのあるディレクトリで実行すること
 
+# check arguments
+if [ $# -ne 2 ]; then
+  echo "docx2md xxx.docx outdir"
+	echo "注意：docxのあるディレクトリで実行すること"
+  exit 1
+fi
+
 FF=`echo $1|sed 's/\.[^\.]*$//'`
 echo $FF
 ls
