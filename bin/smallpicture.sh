@@ -11,7 +11,7 @@ for i in "$@"; do
   # ファイル作成日を取得
   CREATEDATE=`GetFileInfo -d  "$INPUT"`
 
-  # 動画縮小
+  # 写真縮小
   sips -Z 1280 "$INPUT" -o "$OUTPUT"
 
   # ファイル作成日を設定
