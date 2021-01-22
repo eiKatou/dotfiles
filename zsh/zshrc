@@ -4,6 +4,11 @@ export PS1="%10F%m%f:%11F%1~%f \$ "
 # .zsh.local
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+# fzf
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey "ç" fzf-cd-widget
+
 # Docker
 alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
 
@@ -16,5 +21,6 @@ autoload -Uz compinit
 compinit
 source <(kubectl completion zsh)
 
+# terraform
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform

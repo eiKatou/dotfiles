@@ -1,10 +1,14 @@
+# local directory
+alias cd.dc='cd ~/Documents/'
+alias cd.dsk='cd ~/Desktop/'
+alias cd.dwn='cd ~/Downloads/'
+
 # Git
 alias git.dotfiles='cd ~/Documents/Git/dotfiles/'
 alias git.sample='cd ~/Documents/Git/Sample/'
 alias git.eikatou.net='cd ~/Documents/Git/eikatou.net/'
 alias git.memo='cd ~/Documents/Git/memo'
 alias gpom='git add -A && git commit -m "mod" && git push origin master'
-
 
 # AWS
 alias aws-export.work='export AWS_PROFILE="work"'
