@@ -4,6 +4,21 @@ export PS1="%10F%m%f:%11F%1~%f \$ "
 # .zsh.local
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+## プロセスを横断してヒストリを共有
+setopt inc_append_history
+## ヒストリの共有の有効化
+setopt share_history
+## 直前と同じコマンドをヒストリに追加しない
+setopt hist_ignore_dups
+## ヒストリに追加されるコマンドが古いものと同じなら古いものを削除
+setopt hist_ignore_all_dups
+## 余分な空白は詰めて記録
+setopt hist_reduce_blanks
+
 # fzf
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -16,9 +31,11 @@ alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
 alias aws-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" amazon/aws-cli'
 alias sam-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" aws-sam'
 
-# k8s
+# タブ補完
 autoload -Uz compinit
 compinit
+
+# k8s
 source <(kubectl completion zsh)
 
 # terraform
