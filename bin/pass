@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters"
+		exit
+fi
+
+if [ ! -e パス ]; then
+	hdiutil attach /Users/ei/Documents/password/ei_password.dmg > /dev/null
+	if [ $? == 1 ]; then
+    echo "Attach failed"
+		exit
+	fi
+fi
+	
+grep $1 /Volumes/ei_password/password.csv
+if [ $? == 1 ]; then
+	echo "見つかりませんでした。"
+fi
+
+hdiutil detach /Volumes/ei_password > /dev/null
+if [ $? == 1 ]; then
+	echo "Eject failed"
+fi
+
