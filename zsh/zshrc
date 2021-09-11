@@ -24,6 +24,9 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey "ç" fzf-cd-widget
 
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 # Docker
 alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
 
