@@ -25,8 +25,8 @@ set tabstop=2
 set shiftwidth=2
 
 " コロンセミコロン入れ変え
-noremap ; :
-noremap : ;
+"noremap ; :
+"noremap : ;
 
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
