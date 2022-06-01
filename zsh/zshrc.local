@@ -13,6 +13,22 @@ alias gpom='git add -A && git commit -m "mod" && git push origin master'
 # AWS
 alias aws-export.work='export AWS_PROFILE="work"'
 alias aws-export.blogger='export AWS_PROFILE="blogger"'
+alias aws-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" amazon/aws-cli'
+alias sam-docker='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE="$AWS_PROFILE" aws-sam'
 
 # PATH
 export PATH="$PATH:$HOME/bin:/Applications/MySQLWorkbench.app/Contents/MacOS"
+
+# Docker
+alias docker-ubuntu-run='docker run -it --rm --entrypoint /bin/bash ubuntu'
+
+# タブ補完
+autoload -Uz compinit
+compinit
+
+# k8s
+source <(kubectl completion zsh)
+
+# terraform
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform

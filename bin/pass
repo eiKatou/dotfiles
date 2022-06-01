@@ -6,7 +6,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 if [ ! -e パス ]; then
-	hdiutil attach /Users/ei/Documents/password/ei_password.dmg > /dev/null
+	hdiutil attach /Users/ei/Dropbox/password/ei_password.dmg > /dev/null
 	if [ $? == 1 ]; then
     echo "Attach failed"
 		exit
