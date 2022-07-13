@@ -1,0 +1,155 @@
+{
+    "title": "Change left_control + CXVZSFWT to left_command + CXVZSFWT",
+    "rules": [
+         {
+            "description": "Change left_control + CXVZSFWT to left_command + CXVZSFWT",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "c",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "c",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "v",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "x",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "x",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "z",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "z",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "s",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "s",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "f",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "w",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "w",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "t",
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                          "key_code": "t",
+                          "modifiers": [
+                            "left_command"
+                          ]
+                        } 
+                    ]
+                }
+            ]
+        }
+
+    ]
+}
